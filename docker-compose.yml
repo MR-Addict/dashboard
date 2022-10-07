@@ -1,0 +1,8 @@
+version: '3'
+services:
+  dashboard:
+    image: mraddict063/dashboard
+    container_name: dashboard
+    restart: unless-stopped
+    ports:
+      - 8086:8086
