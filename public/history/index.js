@@ -76,11 +76,18 @@ doughnut_options.plugins.title.text = "";
 const submitChart = new Chart(chart5, {
   type: "polarArea", // bar,horizontalBar, pie, line, doughnut, radar, polarArea
   data: {
-    labels: ["平均温度", "平均湿度", "平均光照强度", "平均CO2浓度"],
+    labels: ["花卉一", "花卉二", "花卉三", "花卉四", "花卉五", "花卉六"],
     datasets: [
       {
-        data: [12, 16, 13, 18],
-        backgroundColor: ["rgba(255, 99, 132)", "rgba(54, 162, 235)", "rgba(255, 206, 86)", "rgba(75, 192, 192)"],
+        data: [89, 78, 85, 86, 80, 76],
+        backgroundColor: [
+          "rgba(255, 99, 132)",
+          "rgba(54, 162, 235)",
+          "rgba(255, 206, 86)",
+          "rgba(75, 192, 192)",
+          "rgba(153, 102, 255)",
+          "rgba(255, 159, 64)",
+        ],
       },
     ],
   },
