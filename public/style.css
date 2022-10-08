@@ -13,6 +13,7 @@
   --black2: #999;
   --green: #40ed31;
   --red: #f00;
+  --yellow: #fdff00;
   --boxshadow: rgba(0, 0, 0, 0.3);
 }
 
@@ -317,7 +318,7 @@ body {
 
 .details table thead tr th,
 .details table tbody tr td {
-  padding: 15px 10px;
+  padding: 10px 5px;
   text-align: start;
 }
 
@@ -334,9 +335,22 @@ body {
   border-bottom: none;
 }
 
-.details table tbody tr:hover {
-  background: var(--blue);
-  color: var(--white);
+.details .status {
+  padding: 5px 10px;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.details .status.bad {
+  background: var(--red);
+}
+
+.details .status.good {
+  background: var(--yellow);
+}
+
+.details .status.great {
+  background: var(--green);
 }
 
 /* response design */

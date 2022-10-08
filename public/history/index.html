@@ -116,17 +116,21 @@
               <h2>历史数据</h2>
             </div>
             <div class="charts">
-              <div class="chart">
-                <canvas id="chart1"></canvas>
+              <div class="chart-element">
+                <h3>温度曲线</h3>
+                <canvas id="chart1" class="chart"></canvas>
               </div>
-              <div class="chart">
-                <canvas id="chart2"></canvas>
+              <div class="chart-element">
+                <h3>湿度曲线</h3>
+                <canvas id="chart2" class="chart"></canvas>
               </div>
-              <div class="chart">
-                <canvas id="chart3"></canvas>
+              <div class="chart-element">
+                <h3>光照强度曲线</h3>
+                <canvas id="chart3" class="chart"></canvas>
               </div>
-              <div class="chart">
-                <canvas id="chart4"></canvas>
+              <div class="chart-element">
+                <h3>CO2浓度曲线</h3>
+                <canvas id="chart4" class="chart"></canvas>
               </div>
             </div>
           </div>
@@ -136,7 +140,7 @@
               <h2>数据对比</h2>
             </div>
             <div>
-              <div class="chart">
+              <div class="chart-element">
                 <canvas id="chart5"></canvas>
               </div>
             </div>
@@ -146,9 +150,9 @@
     </div>
     <script src="/lib/chart.js"></script>
     <script src="/lib/chartOptions.js"></script>
-    <script src="/lib/chartDataLabels.js" defer></script>
-    <script src="/lib/togglemenu.js" defer></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="/lib/chartDataLabels.js"></script>
+    <script src="/lib/togglemenu.js"></script>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" type="module"></script>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" nomodule></script>
   </body>
 </html>

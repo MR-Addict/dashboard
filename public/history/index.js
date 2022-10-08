@@ -4,7 +4,6 @@ const chart3 = document.getElementById("chart3").getContext("2d");
 const chart4 = document.getElementById("chart4").getContext("2d");
 const chart5 = document.getElementById("chart5").getContext("2d");
 
-line_options.plugins.title.text = "温度曲线";
 const tempChart = new Chart(chart1, {
   type: "line", // bar,horizontalBar, pie, line, doughnut, radar, polarArea
   data: {
@@ -22,7 +21,6 @@ const tempChart = new Chart(chart1, {
   options: line_options,
 });
 
-line_options.plugins.title.text = "湿度曲线";
 const humidChart = new Chart(chart2, {
   type: "line", // bar,horizontalBar, pie, line, doughnut, radar, polarArea
   data: {
@@ -40,7 +38,6 @@ const humidChart = new Chart(chart2, {
   options: line_options,
 });
 
-line_options.plugins.title.text = "光照强度曲线";
 const lightChart = new Chart(chart3, {
   type: "line", // bar,horizontalBar, pie, line, doughnut, radar, polarArea
   data: {
@@ -58,7 +55,6 @@ const lightChart = new Chart(chart3, {
   options: line_options,
 });
 
-line_options.plugins.title.text = "CO2曲线";
 const CO2Chart = new Chart(chart4, {
   type: "line", // bar,horizontalBar, pie, line, doughnut, radar, polarArea
   data: {
@@ -88,5 +84,6 @@ const submitChart = new Chart(chart5, {
       },
     ],
   },
+  plugins: [ChartDataLabels],
   options: doughnut_options,
 });

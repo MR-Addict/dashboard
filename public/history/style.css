@@ -278,20 +278,32 @@ body {
 }
 
 .history .charts {
-  margin-top: 20px;
   display: grid;
-  grid-gap: 20px;
   grid-template-columns: repeat(2, 2fr);
 }
 
-.history .charts .chart {
-  height: 190px;
+.history .charts .chart-element {
   border-radius: 10px;
-  background: var(--grey);
+  text-align: center;
+  position: relative;
 }
 
-.history .charts .chart canvas {
+#chart5 {
+  margin: 0 auto;
+}
+
+.history .charts .chart-element h3 {
+  color: var(--black2);
+}
+
+.history .charts .chart-element canvas {
   padding: 10px 10px 0 10px;
+}
+
+.chart {
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
 }
 
 /* details */
