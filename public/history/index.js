@@ -4,13 +4,28 @@ const chart3 = document.getElementById("chart3").getContext("2d");
 const chart4 = document.getElementById("chart4").getContext("2d");
 const chart5 = document.getElementById("chart5").getContext("2d");
 
+function getRecentDaysArray(days_length) {
+  var array = [];
+  for (
+    dt = new Date(new Date().setDate(new Date().getDate() - days_length + 1));
+    dt <= new Date();
+    dt.setDate(dt.getDate() + 1)
+  ) {
+    const temp_date = dt.toISOString().slice(5, 10);
+    array.push(Number(temp_date.split("-")[0]) + "-" + Number(temp_date.split("-")[1]));
+  }
+  return array;
+}
+
+const recent_days = getRecentDaysArray(7);
+
 const tempChart = new Chart(chart1, {
   type: "line", // bar,horizontalBar, pie, line, doughnut, radar, polarArea
   data: {
-    labels: [7.8, 7.9, 7.1, 7.11, 7.12, 7.13],
+    labels: recent_days,
     datasets: [
       {
-        data: [12, 25, 26, 12, 27, 18],
+        data: [16, 22, 19, 23, 20, 18, 20],
         fill: true,
         backgroundColor: "#8a16f060",
         borderColor: "#8a16f0",
@@ -18,16 +33,17 @@ const tempChart = new Chart(chart1, {
       },
     ],
   },
+  plugins: [ChartDataLabels],
   options: line_options,
 });
 
 const humidChart = new Chart(chart2, {
   type: "line", // bar,horizontalBar, pie, line, doughnut, radar, polarArea
   data: {
-    labels: [7.8, 7.9, 7.1, 7.11, 7.12, 7.13],
+    labels: recent_days,
     datasets: [
       {
-        data: [12, 25, 26, 12, 27, 18],
+        data: [18, 22, 23, 19, 20, 18, 21],
         fill: true,
         backgroundColor: "#8a16f060",
         borderColor: "#8a16f0",
@@ -35,16 +51,17 @@ const humidChart = new Chart(chart2, {
       },
     ],
   },
+  plugins: [ChartDataLabels],
   options: line_options,
 });
 
 const lightChart = new Chart(chart3, {
   type: "line", // bar,horizontalBar, pie, line, doughnut, radar, polarArea
   data: {
-    labels: [7.8, 7.9, 7.1, 7.11, 7.12, 7.13],
+    labels: recent_days,
     datasets: [
       {
-        data: [12, 25, 26, 12, 27, 18],
+        data: [22, 17, 18, 23, 20, 18, 16],
         fill: true,
         backgroundColor: "#8a16f060",
         borderColor: "#8a16f0",
@@ -52,16 +69,17 @@ const lightChart = new Chart(chart3, {
       },
     ],
   },
+  plugins: [ChartDataLabels],
   options: line_options,
 });
 
 const CO2Chart = new Chart(chart4, {
   type: "line", // bar,horizontalBar, pie, line, doughnut, radar, polarArea
   data: {
-    labels: [7.8, 7.9, 7.1, 7.11, 7.12, 7.13],
+    labels: recent_days,
     datasets: [
       {
-        data: [12, 25, 26, 12, 27, 18],
+        data: [18, 24, 20, 19, 23, 18, 23],
         fill: true,
         backgroundColor: "#8a16f060",
         borderColor: "#8a16f0",
@@ -69,6 +87,7 @@ const CO2Chart = new Chart(chart4, {
       },
     ],
   },
+  plugins: [ChartDataLabels],
   options: line_options,
 });
 

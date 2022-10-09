@@ -24,7 +24,7 @@ const doughnut_options = {
       formatter: (value, context) => {
         const dataPoints = context.dataset.data;
         const sum = parseInt(dataPoints.reduce((prop, a) => prop + a, 0));
-        if (sum) return `${value}\n${((value / sum) * 100).toFixed(1)}%`;
+        if (sum) return `${value}分`;
         else return "error";
       },
       labels: {
@@ -65,7 +65,7 @@ const line_options = {
     },
     datalabels: {
       anchor: "end",
-      align: "center",
+      align: "start",
       color: "#555",
       formatter: (value, context) => {
         return `${value}`;
