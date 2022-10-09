@@ -45,6 +45,12 @@ const line_options = {
   scales: {
     y: {
       beginAtZero: true,
+      grid: {
+        display: false,
+      },
+      ticks: {
+        display: false,
+      },
     },
   },
   plugins: {
