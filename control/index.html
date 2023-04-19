@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+    <title>设备调控</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- header -->
+      <div class="header"></div>
+      <div class="navbar">
+        <ul>
+          <li>
+            <a href="../index.html">
+              <span class="icon"><ion-icon name="rose-outline"></ion-icon></span>
+              <span class="title">花卉培育监控系统</span>
+            </a>
+          </li>
+          <li>
+            <a href="../index.html">
+              <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+              <span class="title">数据监控</span>
+            </a>
+          </li>
+          <li class="selected">
+            <a href="../control/index.html">
+              <span class="icon"><ion-icon name="construct-outline"></ion-icon></ion-icon></span>
+              <span class="title">设备调控</span>
+            </a>
+          </li>
+          <li>
+            <a href="../history/index.html">
+              <span class="icon"><ion-icon name="bar-chart-outline"></ion-icon></span>
+              <span class="title">历史数据</span>
+            </a>
+          </li>
+          <li>
+            <a href="../index.html">
+              <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+              <span class="title">退出登录</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- main -->
+      <div class="main">
+        <div class="topbar">
+          <!-- toggle -->
+          <div class="toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+          </div>
+          <!-- search -->
+          <div class="header-title">
+            <h1>设备调控</h1>
+          </div>
+          <!-- userImg -->
+          <div class="user">
+            <img src="../images/avatar.png" alt="avatar" />
+          </div>
+        </div>
+        <!-- card -->
+        <div class="cardBox">
+          <div class="card">
+            <div>
+              <div class="numbers"><span>4</span> 台</div>
+              <div class="cardName">运行设备</div>
+            </div>
+            <div class="iconBox">
+              <ion-icon name="bug-outline"></ion-icon>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <div class="numbers"><span>2</span> 台</div>
+              <div class="cardName">停止设备</div>
+            </div>
+            <div class="iconBox">
+              <ion-icon name="power-outline"></ion-icon>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <div class="numbers"><span>10.1.1.1</span></div>
+              <div class="cardName">主机IP</div>
+            </div>
+            <div class="iconBox">
+              <ion-icon name="business-outline"></ion-icon>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <div class="numbers"><span>/home</span></div>
+              <div class="cardName">主机订阅地址</div>
+            </div>
+            <div class="iconBox">
+              <ion-icon name="stats-chart-outline"></ion-icon>
+            </div>
+          </div>
+        </div>
+        <!-- data list -->
+        <div class="data-body">
+          <!-- devices -->
+          <div class="devices">
+            <div class="cardHeader">
+              <h2>设备信息</h2>
+            </div>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>设备名</th>
+                    <th>IP地址</th>
+                    <th>订阅地址</th>
+                    <th>运行时间</th>
+                    <th>运行状态</th>
+                    <th>操作</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>设备一</td>
+                    <td><span>10.1.1.2</span></td>
+                    <td><span>/device1</span></td>
+                    <td><span>02:00-30:00</span></td>
+                    <td><span class="status running">运行中</span></td>
+                    <td><button>停止</button></td>
+                  </tr>
+                  <tr>
+                    <td>设备二</td>
+                    <td><span>10.1.1.3</span></td>
+                    <td><span>/device2</span></td>
+                    <td><span>02:00-30:00</span></td>
+                    <td><span class="status stopped">已停止</span></td>
+                    <td><button>开启</button></td>
+                  </tr>
+                  <tr>
+                    <td>设备三</td>
+                    <td><span>10.1.1.4</span></td>
+                    <td><span>/device3</span></td>
+                    <td><span>02:00-30:00</span></td>
+                    <td><span class="status running">运行中</span></td>
+                    <td><button>停止</button></td>
+                  </tr>
+                  <tr>
+                    <td>设备四</td>
+                    <td><span>10.1.1.5</span></td>
+                    <td><span>/device4</span></td>
+                    <td><span>02:00-30:00</span></td>
+                    <td><span class="status running">运行中</span></td>
+                    <td><button>停止</button></td>
+                  </tr>
+                  <tr>
+                    <td>设备五</td>
+                    <td><span>10.1.1.6</span></td>
+                    <td><span>/device5</span></td>
+                    <td><span>02:00-30:00</span></td>
+                    <td><span class="status stopped">已停止</span></td>
+                    <td><button>开启</button></td>
+                  </tr>
+                  <tr>
+                    <td>设备六</td>
+                    <td><span>10.1.1.7</span></td>
+                    <td><span>/device6</span></td>
+                    <td><span>02:00-30:00</span></td>
+                    <td><span class="status running">运行中</span></td>
+                    <td><button>停止</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../lib/togglemenu.js"></script>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" type="module"></script>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" nomodule></script>
+  </body>
+</html>
